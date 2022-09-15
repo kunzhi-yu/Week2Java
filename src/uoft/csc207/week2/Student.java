@@ -4,9 +4,11 @@ package uoft.csc207.week2;
 */
 
 public class Student extends Person {
+    private final String stuNum;
+
     @Override
     public String toString() {
-        return "Student: " + super.toString(); // Both variables and objects have a type
+        return "Student: " + super.toString() + " " + this.stuNum; // Both variables and objects have a type
 
     }
 
@@ -15,8 +17,10 @@ public class Student extends Person {
      *
      * @param name   the person's name (family name last)
      * @param utorid the person's UTORid
+     * @param stuNum the 1-=digit student number
      */
-    Student(String[] name, String utorid) {
+    Student(String[] name, String utorid, String stuNum) {
         super(name, utorid);
+        this.stuNum = stuNum;
     }
 }
